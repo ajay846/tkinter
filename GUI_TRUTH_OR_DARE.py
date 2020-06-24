@@ -126,6 +126,7 @@ def sub_p_n_2():
                 def proceeding():
                     label_truth.destroy()
                     label_p_n.destroy()
+                    btn_pro.destroy()
 
                     spin()
 
@@ -206,6 +207,7 @@ def sub_p_n_3():
                 def proceeding():
                     label_truth.destroy()
                     label_p_n.destroy()
+                    btn_pro.destroy()
 
                     spin()
 
@@ -285,6 +287,7 @@ def sub_p_n_4():
                 def proceeding():
                     label_truth.destroy()
                     label_p_n.destroy()
+                    btn_pro.destroy()
 
                     spin()
 
