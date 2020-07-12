@@ -173,7 +173,7 @@ atm.mainloop()
         Traceback (most recent call last):
           File "C:\Python\Python36\lib\tkinter\__init__.py", line 1705, in __call__
             return self.func(*args)
-          File "C:\Users\Uttarkar Sai Nath\Desktop\Python\Tkinter\ATM.py", line 48, in draw
+          File "C:\Users\Desktop\Python\Tkinter\ATM.py", line 48, in draw
             bank_balance -= int(withdraw_amt.get())
           File "C:\Python\Python36\lib\tkinter\__init__.py", line 2682, in get
             return self.tk.call(self._w, 'get')
