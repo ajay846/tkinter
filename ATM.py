@@ -4,17 +4,24 @@ from time import sleep
 atm = Tk()
 atm.title("Welcome!")
 atm.geometry("430x216")
+atm.resizable(False,False)
+
+#def main():
 
 global PIN
 global bank_balance
 global text_balance
+global delay
 
 PIN = "2625"
 bank_balance = 9000000
 
-text_balance = "Your Bank Balance Is "
+text_balance = "Your Bank Balance Is $"
+
+delay = 5
 
 def balance():
+
     label_info_1.destroy()
     label_info_2.destroy()
     label_info_3.destroy()
@@ -30,15 +37,18 @@ def withdraw():
     label_info_4.destroy()
 
     def draw():
+        global bank_balance
+
         bb.destroy()
         withdraw_amt.destroy()
         sub_amt.destroy()
 
-        #amt = withdraw_amt.get()
-
         #global after
 
         bank_balance -= int(withdraw_amt.get())
+
+    global bb
+    global withdraw_amt
 
     bb = Label(atm, text=text_balance+str(bank_balance), font=('times', 12, 'bold'))
     bb.grid(row=1,column=1)
@@ -59,6 +69,8 @@ def add():
         add_amt.destroy()
         sub_add.destroy()
 
+        global bank_balance
+
         bank_balance += int(add_amt.get())
 
         bank_after_add = Label(atm,text=text_balance+str(bank_balance))
@@ -71,6 +83,7 @@ def add():
     sub_add.grid(row=2,column=2)
 
 def exit():
+
     label_info_1.destroy()
     label_info_2.destroy()
     label_info_3.destroy()
@@ -85,6 +98,9 @@ def exit():
 
     greet = Label(atm, text="Thank You For Visiting!", font=('times', 12, 'bold'))
     greet.pack()
+
+    label_info = Label(atm,text="Your Personal Details Are Safe", font=('times', 8, 'bold'))
+    label_info.pack()
 
     exit_atm = Button(atm,text="Exit ATM",command=exitpgm)
     exit_atm.pack(side=BOTTOM)
@@ -126,14 +142,45 @@ def check():
         label_info_3.grid(row=2,column=1)
         label_info_4.grid(row=3,column=1)
 
-    else:
+    elif pin.get() == "" or pin.get() == None and pin.get() != None:
+        error_label = Label(atm,text="Please Enter the PIN")
+        error_label.pack()
+
+#        sleep(delay)
+
+    elif pin.get() != PIN and pin.get() != None or pin.get() != "":
         error_label = Label(atm,text="The PIN is incorrect")
         error_label.pack()
+
+#       sleep(delay)
 
 pin = Entry(atm)
 pin.pack()
 
-sub0 = Button(atm,text="Submit",command=check, padx=15, pady=20)
+sub0 = Button(atm,text="Log In",command=check, padx=15, pady=10)
 sub0.pack()
 
 atm.mainloop()
+
+
+'''
+    There is a bug in the code. If someone could solve it it'd be of a great help!
+'''
+
+'''
+    The error is below
+        Exception in Tkinter callback
+        Traceback (most recent call last):
+          File "C:\Python\Python36\lib\tkinter\__init__.py", line 1705, in __call__
+            return self.func(*args)
+          File "C:\Users\Uttarkar Sai Nath\Desktop\Python\Tkinter\ATM.py", line 48, in draw
+            bank_balance -= int(withdraw_amt.get())
+          File "C:\Python\Python36\lib\tkinter\__init__.py", line 2682, in get
+            return self.tk.call(self._w, 'get')
+        _tkinter.TclError: invalid command name ".!entry2"
+'''
+
+'''
+    If someone has any solution for this pls dm me on my instagram account @iamsainath.u
+'''
+
