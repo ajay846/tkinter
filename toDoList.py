@@ -13,12 +13,9 @@ c = conn.cursor()
 
 print("Connected to "+str(sqlite3.version))
 
-
-'''
-c.execute("""CREATE TABLE tasks (
+c.execute("""CREATE TABLE tasks IF NOT EXISTS (
 				tasks_are text
 		)""")
-		'''
 
 main_win = Tk()
 main_win.title("Need To Do")
