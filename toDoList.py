@@ -13,7 +13,7 @@ c = conn.cursor()
 
 print("Connected to "+str(sqlite3.version))
 
-c.execute("""CREATE TABLE tasks IF NOT EXISTS (
+c.execute("""CREATE TABLE IF NOT EXISTS tasks(
 				tasks_are text
 		)""")
 
