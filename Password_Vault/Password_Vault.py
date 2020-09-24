@@ -1,5 +1,6 @@
 import mysql.connector
 from tkinter import *
+import webbrowser
 
 global password
 password = "123"
@@ -91,6 +92,8 @@ def main():
 
                             success_win.config(menu=menu4)
                             success_win.mainloop()
+                            
+                            webbrowser.open("https://www.instagram.com/iamchintu.u", new=2) #DM Me On Instagram For Any Queries
                         except:
                             error_win = Tk()
                             error_win.title("Error!")
@@ -179,6 +182,9 @@ if __name__ == "__main__":
     main()
 
 '''
-If Someone Could Help Me With The Delete Button It'd Be Great!
+If Someone Could Help Me With The Delete Button It'd Be Of A Great Help!
+---------------------------------------------------------------------------------
+Any Queries DM Me On My Instagram https://www.instagram.com/iamchintu.u
+Username: iamchintu.u
 '''
 
