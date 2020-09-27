@@ -140,7 +140,7 @@ def main():
                 cursor.execute("SELECT * FROM users_pws")
                 results = cursor.fetchall()
 
-                if subCursor.rowcount == 0:
+                if cursor.rowcount == 0:
                     msg = "No data found, Add Now!"
                     label_msg = Label(passwords_window, text=msg, font=('courier', '10', 'bold'))
                     label_msg.pack()
