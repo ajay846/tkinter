@@ -1,7 +1,7 @@
 """
     *Any issues or doubts related to any of my projects feel free to DM me on my Instagram acc...
     *Link to my instagram -> https://www.instagram.com/u_sai00_
-    *Username - u_sai00_
+    *Username -> u_sai00_
 """
 """
     *I'm using MySQL as my database for this project 
