@@ -22,10 +22,10 @@ global subCursor
 
 #Connect to database
 subDb = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "rootmysql@1#",
-    database = "main"
+    host = "<YOUR HOST ADDRESS>",   #Host address and be either 'localhost' or your computer's permanent ip address
+    user = "<YOUR USERNAME>",
+    password = "<YOUR PASSWORD>",
+    database = "<YOUR DATABASE NAME>"
 )
 
 #Create cursor
